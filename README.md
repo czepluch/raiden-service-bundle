@@ -152,7 +152,7 @@ If you want to participate in the network by running a Raiden Service Bundle you
    - We would appreciate it if you allow us access to the monitoring interfaces
      (to do that uncomment the default values of the `CIDR_ALLOW_METRICS` and `CIDR_ALLOW_PROXY` settings).
    - We also recommend that you provide your own monitoring. The setup of which is currently out of scope of this document.
-1. Make sure, that the account, configured in `KEYSTORE_FILE`, has enough funding to register as a service operator.
+1. Make sure, that the account, configured in `KEYSTORE_FILE`, has enough funding to register as a service operator. Make sure that the account is stored in `${DATA_DIR}/KEYSTORE/`.
 1. If you haven't done so before, run `./register-service-provider.sh` (it uses configuration values from `.env`).
 1. Run `docker-compose up -d` to start all services
    - The services are configured to automatically restart in case of a crash or reboot
